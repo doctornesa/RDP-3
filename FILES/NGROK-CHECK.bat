@@ -7,7 +7,7 @@ curl -o "C:\Users\Public\Desktop\Telegram.exe" https://raw.githubusercontent.com
 curl -o "C:\Users\Public\Desktop\winrar_SETUP.exe" https://raw.githubusercontent.com/ans2004/RDP/main/FILES/winrar-x64-602ar.exe > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\HTTP BY ANAS.txt" https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\SOCKS4 BY ANAS.txt" https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks4&country=all > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\SOCKS5 BY ANAS.txt" https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5&timeout=10000&country=all > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\SOCKS5 BY ANAS.txt" https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5&country=all > out.txt 2>&1
 net user administrator @ans2004123 /add >nul
 net localgroup administrators administrator /add >nul
 net user administrator /active:yes >nul
