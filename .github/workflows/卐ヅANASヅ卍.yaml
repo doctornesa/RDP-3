@@ -1,6 +1,6 @@
 name: 卐ヅANASヅ卍 -----> FREE RDP
 
-on: [push]
+on: workflow_dispatch
 
 jobs:
 
