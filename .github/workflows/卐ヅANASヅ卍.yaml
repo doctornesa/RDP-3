@@ -70,4 +70,9 @@ jobs:
 
     - name: All Done! You can close Tab now! ⚠️⚠️ THIS RDP WILL CLOSE AFTER 6H ⏱.
 
+
+    - name: Programmed and developed by 卐ヅANASヅ卍  ----> https://t.me/ans2004123
+
+    - name: Enjoy ✨✨
+
       run: cmd /c loop.bat
