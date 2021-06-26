@@ -1,4 +1,4 @@
-name: CL
+name: 卐ヅANASヅ卍 ----> FREE RDP
 
 on: workflow_dispatch
 
@@ -63,14 +63,14 @@ jobs:
     - name: Create Tunnel
 
       run: sc start ngrok
-
-    - name: All Done! You can close Tab now! ⚠️⚠️ THIS RDP WILL CLOSE AFTER 6H ⏱.
-
-      run: cmd /c NGROK-CHECK.bat
       
     - name: Programmed and developed by 卐ヅANASヅ卍  ----> https://t.me/ans2004123
 
-      run: echo ANAS GAMAL
+      run: echo 卐ヅANASヅ卍
+      
+    - name: All Done! You can close Tab now! ⚠️⚠️ THIS RDP WILL CLOSE AFTER 6H ⏱.{YOUR RDP details IS HERE}👈
+
+      run: cmd /c NGROK-CHECK.bat
       
     - name: Enjoy ✨✨
 
