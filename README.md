@@ -2,15 +2,17 @@
 
 ## 📝 RDP details.
 
-> RDP 
+> **RDP 7GB RAM** 
 
 > <p align="center">
-[<img src="https://raw.githubusercontent.com/ans2004/RDP/main/FILES/2.jpg" alt="img" width="1280" height="260"/>](https://t.me/ans2004123)
+[<img src="https://raw.githubusercontent.com/ans2004/RDP/main/FILES/2.jpg" alt="img" width="900" height="170"/>](https://t.me/ans2004123)
 </p>
 
+> **latest proxy (HTTP/SOCKS4/SOCKS5) 🔥Automatically renew🔥**
 > <p align="center">
-[<img src="https://raw.githubusercontent.com/ans2004/RDP/main/FILES/3.jpg" alt="img" width="300" height="170"/>](https://t.me/ans2004123)
+[<img src="https://raw.githubusercontent.com/ans2004/RDP/main/FILES/3.jpg" alt="img" width="900" height="170"/>](https://t.me/ans2004123)
 </p>
+
 
 ## 📞To contact the developer💻.
 
