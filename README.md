@@ -1,7 +1,7 @@
 # FREE RDP 2021
 
 > **RDP 2CPU & 7GB RAM FOR 6 HOURS**
-> **RDP COME WITH TELEGRAM AND WIN RAR **
+> **RDP COME WITH TELEGRAM AND WIN RAR**
 
 ## 📞To contact the developer💻.
 
