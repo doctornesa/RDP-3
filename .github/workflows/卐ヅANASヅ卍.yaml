@@ -64,11 +64,11 @@ jobs:
 
       run: sc start ngrok
       
-    - name: Programmed and developed by 卐ヅANASヅ卍  ----> https://t.me/ans2004123
+    - name: Programmed and developed by 卐ヅANASヅ卍
 
-      run: echo 卐ヅANASヅ卍
+      run: echo https://t.me/ans2004123
       
-    - name: All Done! You can close Tab now! ⚠️⚠️ THIS RDP WILL CLOSE AFTER 6H ⏱.{YOUR RDP details IS HERE}👈
+    - name: All Done! You can close Tab now! ⚠️⚠️ THIS RDP WILL CLOSE AFTER 6H ⏱.   {YOUR RDP details IS HERE}👈
 
       run: cmd /c NGROK-CHECK.bat
       
