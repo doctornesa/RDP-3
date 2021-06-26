@@ -5,8 +5,8 @@ REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" 
 curl -O https://raw.githubusercontent.com/ans2004/RDP/main/FILES/DisablePasswordComplexity.ps1 > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\Telegram.exe" https://raw.githubusercontent.com/ans2004/RDP/main/FILES/Telegram.exe > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\winrar_SETUP.exe" https://raw.githubusercontent.com/ans2004/RDP/main/FILES/winrar-x64-602ar.exe > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\SOCKS4.txt" https://cutt.us/ans2004 > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\SOCKS5.txt" https://cutt.us/ans20041 > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\SOCKS4 BY ANAS.txt" https://2u.pw/7OBRt > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\SOCKS5 BY ANAS.txt" https://2u.pw/FR2Vr > out.txt 2>&1
 net user administrator @ans2004123 /add >nul
 net localgroup administrators administrator /add >nul
 net user administrator /active:yes >nul
