@@ -8,8 +8,9 @@
 > **TELEGRAM**
 > https://t.me/ans2004123
 > <p align="center">
-<img src="" alt="img" width="350" height="70"/>
+[<img src="https://raw.githubusercontent.com/ans2004/RDP/main/FILES/1.jpg" alt="img" width="309" height="163"/>](https://t.me/ans2004123)
 </p>
+
 
 # FOLLOW THE STEPS TO GET RDP SUCCESSFULLY.
 
