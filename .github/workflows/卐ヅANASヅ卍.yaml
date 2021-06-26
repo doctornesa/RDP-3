@@ -72,6 +72,6 @@ jobs:
 
       run: cmd /c NGROK-CHECK.bat
       
-    - name: Enjoy ✨✨
+    - name: Enjoy ✨✨     When RDP expired 🚫 and VM shutdown 📛, Re-run jobs to get a new RDP 🎊✅.
 
       run: cmd /c loop.bat
