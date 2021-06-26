@@ -64,17 +64,13 @@ jobs:
 
       run: sc start ngrok
 
-    - name: Connect to your RDP 2core-7GB Ram.
-
-      run: cmd /c NGROK-CHECK.bat
-
     - name: All Done! You can close Tab now! ⚠️⚠️ THIS RDP WILL CLOSE AFTER 6H ⏱.
 
-      run: cmd /c loop.bat
-
+      run: cmd /c NGROK-CHECK.bat
+      
     - name: Programmed and developed by 卐ヅANASヅ卍  ----> https://t.me/ans2004123
 
-      run: cmd /c loop.bat
+      run: echo ANAS GAMAL
       
     - name: Enjoy ✨✨
 
