@@ -1,7 +1,16 @@
-# FREE RDP 2021
+#  FREE RDP 2021
 
-> **RDP 2CPU & 7GB RAM FOR 6 HOURS**
-> **RDP COME WITH TELEGRAM AND WIN RAR**
+## 📝 RDP details.
+
+> RDP 
+
+> <p align="center">
+[<img src="https://raw.githubusercontent.com/ans2004/RDP/main/FILES/2.jpg" alt="img" width="1280" height="260"/>](https://t.me/ans2004123)
+</p>
+
+> <p align="center">
+[<img src="https://raw.githubusercontent.com/ans2004/RDP/main/FILES/3.jpg" alt="img" width="300" height="170"/>](https://t.me/ans2004123)
+</p>
 
 ## 📞To contact the developer💻.
 
