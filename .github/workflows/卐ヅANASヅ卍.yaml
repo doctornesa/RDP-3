@@ -1,4 +1,4 @@
-name: 卐ヅANASヅ卍 -----> FREE RDP
+name: CL
 
 on: workflow_dispatch
 
@@ -16,9 +16,9 @@ jobs:
 
       run: |
 
-        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP-2021/main/FILES/ngrok.exe -OutFile ngrok.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP/main/FILES/ngrok.exe -OutFile ngrok.exe
 
-        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP-2021/main/FILES/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP/main/FILES/nssm.exe -OutFile nssm.exe
 
     - name: Copy NSSM & Ngrok to Windows Directory.
 
@@ -40,11 +40,11 @@ jobs:
 
       run: |
 
-        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP-2021/main/FILES/NGROK-AP.bat -OutFile NGROK-AP.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP/main/FILES/NGROK-AP.bat -OutFile NGROK-AP.bat
 
-        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP-2021/main/FILES/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP/main/FILES/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
 
-        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP-2021/main/FILES/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP/main/FILES/loop.bat -OutFile loop.bat
 
     - name: Make YML file for NGROK.
 
