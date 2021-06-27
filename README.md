@@ -42,5 +42,6 @@
 
 ### ⚠️⚠️ You are not allowed to modify the project.
 
+# Edit The Open Bullet program has been removed to preserve this project
 
 ## Enjoy ✨✨
