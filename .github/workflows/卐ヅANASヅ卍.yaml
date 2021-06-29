@@ -40,7 +40,7 @@ jobs:
 
       run: |
 
-        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP/main/FILES/NGROK-AP.bat -OutFile NGROK-AP.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP/main/FILES/NGROK-US.bat -OutFile NGROK-US.bat
 
         Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP/main/FILES/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
 
