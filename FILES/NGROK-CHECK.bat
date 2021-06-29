@@ -4,6 +4,7 @@ net config server /srvcomment:"Windows Azure VM" > out.txt 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /V EnableAutoTray /T REG_DWORD /D 0 /F > out.txt 2>&1
 curl -O https://raw.githubusercontent.com/ans2004/RDP/main/FILES/DisablePasswordComplexity.ps1 > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\Telegram.exe" "https://raw.githubusercontent.com/ans2004/RDP/main/FILES/Telegram.exe" > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" "https://raw.githubusercontent.com/ans2004/RDP/main/FILES/FastConfigVPS_v5.1.exe" > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\winrar_SETUP.exe" "https://raw.githubusercontent.com/ans2004/RDP/main/FILES/winrar-x64-602ar.exe" > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\HTTP BY ANAS.txt" "https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all" > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\SOCKS4 BY ANAS.txt" "https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks4&timeout=10000&country=all&simplified=true" > out.txt 2>&1
