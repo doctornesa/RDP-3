@@ -48,7 +48,7 @@ jobs:
 
     - name: Make YML file for NGROK.
 
-      run: start NGROK-AP.bat
+      run: start NGROK-US.bat
 
     - name: Enable RDP Access.
 
