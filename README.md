@@ -1,5 +1,3 @@
-# FOLLOW THE STEPS TO GET RDP SUCCESSFULLY.
-
 * Click Fork in the right corner of the screen to save it to your Github.
 * Visit https://dashboard.ngrok.com to get **NGROK_AUTH_TOKEN**.
 * In Github go to ⚙ Settings> Secrets> New repository secret.
