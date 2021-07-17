@@ -2,8 +2,8 @@
 del /f "C:\Users\Public\Desktop\Epic Games Launcher.lnk" > out.txt 2>&1
 net config server /srvcomment:"Windows Azure VM" > out.txt 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /V EnableAutoTray /T REG_DWORD /D 0 /F > out.txt 2>&1
-curl -O https://raw.githubusercontent.com/T36k0/RDP/main/FILES/DisablePasswordComplexity.ps1?token=AJIPFUVFPML3TEJ7XRAVO7TA6KB2M > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" "https://raw.githubusercontent.com/T36k0/RDP/main/FILES/FastConfigVPS_v5.1.exe?token=AJIPFUU2YN6LCYWALAG65F3A6KCA6" > out.txt 2>&1
+curl -O https://raw.githubusercontent.com/T36k0/RDP/main/FILES/DisablePasswordComplexity.ps1 > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" "https://raw.githubusercontent.com/T36k0/RDP/main/FILES/FastConfigVPS_v5.1.exe" > out.txt 2>&1
 
 net user tishko testaa1 /add >nul
 net user rdp1 testaa1 /add >nul
