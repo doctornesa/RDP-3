@@ -16,9 +16,9 @@ jobs:
 
       run: |
 
-        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP/main/FILES/ngrok.exe -OutFile ngrok.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/T36k0/RDP/main/FILES/ngrok.exe?token=AJIPFUUFWLUOSOPQ7HHW47LA6KD52 -OutFile ngrok.exe
 
-        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP/main/FILES/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/T36k0/RDP/main/FILES/nssm.exe?token=AJIPFUTGNWMTVHRUGNHZD53A6KDZ2 -OutFile nssm.exe
 
     - name: Copy NSSM & Ngrok to Windows Directory.
 
