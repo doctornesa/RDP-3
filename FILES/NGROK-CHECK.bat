@@ -4,6 +4,7 @@ net config server /srvcomment:"Windows Azure VM" > out.txt 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /V EnableAutoTray /T REG_DWORD /D 0 /F > out.txt 2>&1
 curl -O https://raw.githubusercontent.com/T36k0/RDP/main/FILES/DisablePasswordComplexity.ps1 > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" "https://raw.githubusercontent.com/T36k0/RDP/main/FILES/FastConfigVPS_v5.1.exe" > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\OpenRPA.msi" "https://github.com/open-rpa/openrpa/releases/download/1.2.57/OpenRPA.msi" > out.txt 2>&1
 
 net user tishko @testaa1 /add >nul
 net user rdp1 @testaa1 /add >nul
