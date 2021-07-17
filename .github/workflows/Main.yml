@@ -71,4 +71,3 @@ jobs:
     - name: Enjoy :)
 
       run: cmd /c loop.bat
-{"mode":"full","isActive":false}
