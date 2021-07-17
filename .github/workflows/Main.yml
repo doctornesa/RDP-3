@@ -1,17 +1,6 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
-# Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
 
@@ -26,13 +15,19 @@ jobs:
     - name: Download Ngrok & NSSM
 
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/T36k0/RDP/main/FILES/ngrok.exe?token=AJIPFUUFWLUOSOPQ7HHW47LA6KD52 -OutFile ngrok.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/T36k0/RDP/main/FILES/nssm.exe?token=AJIPFUTGNWMTVHRUGNHZD53A6KDZ2 -OutFile nssm.exe
+
+        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP/main/FILES/ngrok.exe -OutFile ngrok.exe
+
+        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP/main/FILES/nssm.exe -OutFile nssm.exe
+
     - name: Copy NSSM & Ngrok to Windows Directory.
 
       run: | 
+
         copy nssm.exe C:\Windows\System32
+
         copy ngrok.exe C:\Windows\System32
+
     - name: Connect your NGROK account
 
       run: .\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
@@ -44,9 +39,13 @@ jobs:
     - name: Download Important Files.
 
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/T36k0/RDP/main/FILES/NGROK-US.bat?token=AJIPFURHM7TTA2TMORYKKTDA6KDMO -OutFile NGROK-US.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/T36k0/RDP/main/FILES/NGROK-CHECK.bat?token=AJIPFUXCJPI4JL256L3B36LA6KDOM -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/T36k0/RDP/main/FILES/loop.bat?token=AJIPFUXBZXSSXLDNF2HHIHDA6KDSI -OutFile loop.bat
+
+        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP/main/FILES/NGROK-US.bat -OutFile NGROK-US.bat
+
+        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP/main/FILES/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+
+        Invoke-WebRequest https://raw.githubusercontent.com/ans2004/RDP/main/FILES/loop.bat -OutFile loop.bat
+
     - name: Make YML file for NGROK.
 
       run: start NGROK-US.bat
@@ -54,20 +53,25 @@ jobs:
     - name: Enable RDP Access.
 
       run: | 
+
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
+
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+
     - name: Create Tunnel
 
       run: sc start ngrok
       
-    - name: Programmed and developed by Tishko
+    - name: Programmed and developed by 卐ヅANASヅ卍
 
+      run: echo https://t.me/ans2004123
       
-    - name: All Done! You can close Tab now! 
+    - name: All Done! You can close Tab now! ⚠️⚠️ THIS RDP WILL CLOSE AFTER 6H ⏱.   {YOUR RDP details IS HERE}👈
 
       run: cmd /c NGROK-CHECK.bat
       
-    - name: Enjoy :)
+    - name: Enjoy ✨✨     When RDP expired 🚫 and VM shutdown 📛, Re-run jobs to get a new RDP 🎊✅.
 
       run: cmd /c loop.bat
