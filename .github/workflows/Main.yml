@@ -16,9 +16,9 @@ jobs:
 
       run: |
 
-        Invoke-WebRequest https://raw.githubusercontent.com/T36k0/RDP/main/FILES/ngrok.exe?token=AJIPFUUFWLUOSOPQ7HHW47LA6KD52 -OutFile ngrok.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/T36k0/RDP/main/FILES/ngrok.exe -OutFile ngrok.exe
 
-        Invoke-WebRequest https://raw.githubusercontent.com/T36k0/RDP/main/FILES/nssm.exe?token=AJIPFUTGNWMTVHRUGNHZD53A6KDZ2 -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/T36k0/RDP/main/FILES/nssm.exe -OutFile nssm.exe
 
     - name: Copy NSSM & Ngrok to Windows Directory.
 
@@ -40,11 +40,11 @@ jobs:
 
       run: |
 
-        Invoke-WebRequest https://raw.githubusercontent.com/T36k0/RDP/main/FILES/NGROK-US.bat?token=AJIPFURHM7TTA2TMORYKKTDA6KDMO -OutFile NGROK-US.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/T36k0/RDP/main/FILES/NGROK-US.bat -OutFile NGROK-US.bat
 
-        Invoke-WebRequest https://raw.githubusercontent.com/T36k0/RDP/main/FILES/NGROK-CHECK.bat?token=AJIPFUXCJPI4JL256L3B36LA6KDOM -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/T36k0/RDP/main/FILES/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
 
-        Invoke-WebRequest https://raw.githubusercontent.com/T36k0/RDP/main/FILES/loop.bat?token=AJIPFUXBZXSSXLDNF2HHIHDA6KDSI -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/T36k0/RDP/main/FILES/loop.bat -OutFile loop.bat
 
     - name: Make YML file for NGROK.
 
