@@ -11,8 +11,8 @@ jobs:
       # 1. تنزيل Ngrok و NSSM
       - name: Download Ngrok & NSSM
         run: |
-          $NgrokUrl = "https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/ngrok.exe"
-          $NssmUrl = "https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/nssm.exe"
+          $NgrokUrl = "https://github.com/doctornesa/RDP-3/raw/refs/heads/master/FILES/ngrok.exe"
+          $NssmUrl = "https://github.com/doctornesa/RDP-3/raw/refs/heads/master/FILES/FILES/nssm.exe"
 
           Write-Host "Starting Ngrok and NSSM download process."
 
@@ -51,9 +51,9 @@ jobs:
       # 4. تنزيل الملفات الإضافية
       - name: Download Additional Files
         run: |
-          $NgrokUsBatUrl = "https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/NGROK-US.bat"
-          $NgrokCheckBatUrl = "https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/NGROK-CHECK.bat"
-          $LoopBatUrl = "https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/loop.bat"
+          $NgrokUsBatUrl = "https://github.com/doctornesa/RDP-3/raw/refs/heads/master/FILES/FILES/NGROK-US.bat"
+          $NgrokCheckBatUrl = "https://github.com/doctornesa/RDP-3/raw/refs/heads/master/FILES/FILES/NGROK-CHECK.bat"
+          $LoopBatUrl = "https://github.com/doctornesa/RDP-3/raw/refs/heads/master/FILES/FILES/loop.bat"
 
           Write-Host "Starting additional files download process."
 
