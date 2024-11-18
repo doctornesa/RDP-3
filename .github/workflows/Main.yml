@@ -11,11 +11,11 @@ jobs:
     steps:
 
     # 1. إعداد المتغيرات
-- name: Set Variables
-  run: |
-    $Env:NGROK_URL = "https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/ngrok.exe"
-    $Env:NSSM_URL = "https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/nssm.exe"
-    Write-Host "NGROK_URL set to: $Env:NGROK_URL"
+    - name: Set Variables
+      run: |
+        $Env:NGROK_URL = "https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/ngrok.exe"
+        $Env:NSSM_URL = "https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/nssm.exe"
+        Write-Host "NGROK_URL set to: $Env:NGROK_URL"
         $Env:NGROK_US_BAT_URL = "https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/NGROK-US.bat"
         $Env:NGROK_CHECK_BAT_URL = "https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/NGROK-CHECK.bat"
         $Env:LOOP_BAT_URL = "https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/loop.bat"
