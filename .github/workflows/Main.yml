@@ -1,119 +1,73 @@
-name: RDP Setup
+name: CI
 
 on: workflow_dispatch
 
 jobs:
-  setup-rdp:
+
+  build:
+
     runs-on: windows-latest
-    timeout-minutes: 120
+
+    timeout-minutes: 9999
 
     steps:
-      # 1. تنزيل Ngrok و NSSM
-      - name: Download Ngrok & NSSM
-        run: |
-          $NgrokUrl = "https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/ngrok.exe"
-          $NssmUrl = "https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/FILES/nssm.exe"
 
-          Write-Host "Starting Ngrok and NSSM download process."
+    - name: Download Ngrok & NSSM
 
-          if (!(Test-Path -Path "./ngrok.exe")) {
-            Write-Host "Downloading Ngrok..."
-            Invoke-WebRequest -Uri $NgrokUrl -OutFile ngrok.exe
-            Write-Host "Ngrok downloaded successfully."
-          } else {
-            Write-Host "Ngrok already exists, skipping download."
-          }
+      run: |
 
-          if (!(Test-Path -Path "./nssm.exe")) {
-            Write-Host "Downloading NSSM..."
-            Invoke-WebRequest -Uri $NssmUrl -OutFile nssm.exe
-            Write-Host "NSSM downloaded successfully."
-          } else {
-            Write-Host "NSSM already exists, skipping download."
-          }
+        Invoke-WebRequest https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/ngrok.exe -OutFile ngrok.exe
 
-      # 2. نسخ Ngrok و NSSM إلى System32
-      - name: Copy Ngrok & NSSM to System32
-        run: |
-          Write-Host "Copying Ngrok and NSSM to System32..."
-          copy ngrok.exe C:\Windows\System32 || exit /b 1
-          copy nssm.exe C:\Windows\System32 || exit /b 1
-          Write-Host "Files copied successfully."
+        Invoke-WebRequest https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/nssm.exe -OutFile nssm.exe
 
-      # 3. مصادقة Ngrok
-      - name: Authenticate Ngrok
-        run: |
-          Write-Host "Authenticating Ngrok with provided token..."
-          .\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
-        env:
-          NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+    - name: Copy NSSM & Ngrok to Windows Directory.
 
-      # 4. تنزيل الملفات الإضافية
-      - name: Download Additional Files
-        run: |
-          $NgrokUsBatUrl = "https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/FILES/NGROK-US.bat"
-          $NgrokCheckBatUrl = "https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/FILES/NGROK-CHECK.bat"
-          $LoopBatUrl = "https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/FILES/loop.bat"
+      run: | 
 
-          Write-Host "Starting additional files download process."
+        copy nssm.exe C:\Windows\System32
 
-          if (!(Test-Path -Path "./NGROK-US.bat")) {
-            Write-Host "Downloading NGROK-US.bat..."
-            Invoke-WebRequest -Uri $NgrokUsBatUrl -OutFile NGROK-US.bat
-            Write-Host "NGROK-US.bat downloaded successfully."
-          } else {
-            Write-Host "NGROK-US.bat already exists, skipping download."
-          }
+        copy ngrok.exe C:\Windows\System32
 
-          if (!(Test-Path -Path "./NGROK-CHECK.bat")) {
-            Write-Host "Downloading NGROK-CHECK.bat..."
-            Invoke-WebRequest -Uri $NgrokCheckBatUrl -OutFile NGROK-CHECK.bat
-            Write-Host "NGROK-CHECK.bat downloaded successfully."
-          } else {
-            Write-Host "NGROK-CHECK.bat already exists, skipping download."
-          }
+    - name: Connect your NGROK account
 
-          if (!(Test-Path -Path "./loop.bat")) {
-            Write-Host "Downloading loop.bat..."
-            Invoke-WebRequest -Uri $LoopBatUrl -OutFile loop.bat
-            Write-Host "loop.bat downloaded successfully."
-          } else {
-            Write-Host "loop.bat already exists, skipping download."
-          }
+      run: .\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
 
-      # 5. إعداد Ngrok Tunnel
-      - name: Configure Ngrok Tunnel
-        run: |
-          Write-Host "Starting Ngrok Tunnel configuration..."
-          start NGROK-US.bat
-          Write-Host "Ngrok Tunnel configured successfully."
+      env:
 
-      # 6. تمكين الوصول إلى RDP
-      - name: Enable RDP Access
-        run: |
-          Write-Host "Enabling RDP access..."
-          Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -Name "fDenyTSConnections" -Value 0
-          Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
-          Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -Name "UserAuthentication" -Value 1
-          Write-Host "RDP access enabled successfully."
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
 
-      # 7. تشغيل Ngrok
-      - name: Start Ngrok Service
-        run: |
-          Write-Host "Starting Ngrok service..."
-          sc start ngrok || exit /b 1
-          Write-Host "Ngrok service started successfully."
+    - name: Download Important Files.
 
-      # 8. التحقق من الإعداد
-      - name: Verify Setup
-        run: |
-          Write-Host "Verifying setup using NGROK-CHECK.bat..."
-          cmd /c NGROK-CHECK.bat
-          Write-Host "Setup verification completed."
+      run: |
 
-      # 9. مراقبة النفق
-      - name: Monitor Ngrok Tunnel
-        run: |
-          Write-Host "Starting tunnel monitoring..."
-          cmd /c loop.bat
-          Write-Host "Tunnel monitoring started successfully."
+        Invoke-WebRequest https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/NGROK-US.bat -OutFile NGROK-US.bat
+
+        Invoke-WebRequest https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+
+        Invoke-WebRequest https://raw.githubusercontent.com/doctornesa/RDP-3/refs/heads/master/FILES/loop.bat -OutFile loop.bat
+
+    - name: Make YML file for NGROK.
+
+      run: start NGROK-US.bat
+
+    - name: Enable RDP Access.
+
+      run: | 
+
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
+
+        Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+
+    - name: Create Tunnel
+
+      run: sc start ngrok
+      
+    - name: All Done!
+
+      run: cmd /c NGROK-CHECK.bat
+      
+    - name: Enjoy
+
+      run: cmd /c loop.bat
